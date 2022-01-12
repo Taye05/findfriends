@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import CardList from './CardList';
+
+import App from './App';
 
 
-import {superHeroes} from "./superHeroes"
 
 
 
 
 ReactDOM.render(
-  <CardList superHeroes={superHeroes} />
+  <App />
  
   ,document.getElementById('root')
  
