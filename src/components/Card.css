@@ -1,9 +1,9 @@
 .container {
     position: relative;
     width: 50%;
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 50px;
+    grid-column-gap: 50px; */
     
   }
 
@@ -11,9 +11,9 @@
   
   .image {
     opacity: 1;
-    /* display: grid; */
-    width: 100%;
-    height: auto;
+    display: grid;
+    width: 80%;
+    height: 50%;
     transition: .5s ease;
     backface-visibility: hidden;
     

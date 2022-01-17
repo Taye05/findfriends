@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import './App.css';
-import CardList from './CardList';
-import {superHeroes} from "./superHeroes";
-import SearchBox from "./SearchBox";
+import CardList from './components/CardList';
+import {superHeroes} from "./components/superHeroes";
+import SearchBox from "./components/SearchBox";
 import 'animate.css';
 import render from "dom-serializer";
+import Scroll from './components/Scroll'
 
 
 
@@ -13,10 +14,18 @@ class  App extends Component {
   constructor(){
     super()
     this.state = {
-      superHeroes: superHeroes,
+      superHeroes: [],
       searchfield: ""
 
     }
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response =>   response.json())
+    .then(users => 
+      this.setState({superHeroes: users}))
+   
   }
 
   onSearchChange = (event) => {
@@ -34,7 +43,9 @@ class  App extends Component {
         <h1 class="animate__animated animate__tada">FindFriends</h1>
         <SearchBox searchChange = {this.onSearchChange}/>
         </div>
+          <Scroll>
         <CardList superHeroes={filteredSuperHeroes} />
+          </Scroll>
        </div>
      );
   }
