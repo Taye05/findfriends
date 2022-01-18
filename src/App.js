@@ -34,10 +34,14 @@ class  App extends Component {
     
   
   render(){
-    const filteredSuperHeroes = this.state.superHeroes.filter(superHeroes =>{
-      return superHeroes.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    const {superHeroes, searchfield} = this.state;
+    const filteredSuperHeroes = superHeroes.filter(superHero =>{
+      return superHero.name.toLowerCase().includes(searchfield.toLowerCase());
     })
-    return (
+    return !superHeroes.length ?
+       <h1>loading....</h1>:
+    
+    (
       <div class="text-center">
         <div className="main">
         <h1 class="animate__animated animate__tada">FindFriends</h1>
@@ -48,8 +52,8 @@ class  App extends Component {
           </Scroll>
        </div>
      );
-  }
+  }}
   
-}
+
 
 export default App;
