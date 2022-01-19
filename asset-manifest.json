@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/findfriends/static/css/main.f896f63a.css",
+    "main.js": "/findfriends/static/js/main.8f3a777f.js",
+    "static/js/787.c49d1240.chunk.js": "/findfriends/static/js/787.c49d1240.chunk.js",
+    "index.html": "/findfriends/index.html",
+    "main.f896f63a.css.map": "/findfriends/static/css/main.f896f63a.css.map",
+    "main.8f3a777f.js.map": "/findfriends/static/js/main.8f3a777f.js.map",
+    "787.c49d1240.chunk.js.map": "/findfriends/static/js/787.c49d1240.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f896f63a.css",
+    "static/js/main.8f3a777f.js"
+  ]
+}
