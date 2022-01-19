@@ -6,6 +6,7 @@ import SearchBox from "./components/SearchBox";
 import 'animate.css';
 import render from "dom-serializer";
 import Scroll from './components/Scroll'
+import ErrorBoundary from './components/ErrorBoundary'
 
 
 
@@ -48,7 +49,9 @@ class  App extends Component {
         <SearchBox searchChange = {this.onSearchChange}/>
         </div>
           <Scroll>
+            <ErrorBoundary>
         <CardList superHeroes={filteredSuperHeroes} />
+            </ErrorBoundary>
           </Scroll>
        </div>
      );
